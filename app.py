@@ -21,12 +21,10 @@ def index():
             prompt = request.form['blogTopic']
             blogT = blog.generateBlogTopics(prompt)
             blogTopicIdeas = blogT.replace('\n', '<br>')
-
         if 'form2' in request.form:
             prompt = request.form['blogSection']
             blogT = blog.generateBlogSections(prompt)
             blogSectionIdeas = blogT.replace('\n', '<br>')
-
         if 'form3' in request.form:
             prompt = request.form['blogExpander']
             blogT = blog.blogSectionExpander(prompt)
